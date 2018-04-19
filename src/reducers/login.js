@@ -1,12 +1,11 @@
 import { LOGIN_SUCCESS  } from "../actions/login";
 
-const initialState = {
-    token : '',
-}
+const initialState = {}
 
 export default function (state = initialState, action) {
     switch (action.type) {
         case LOGIN_SUCCESS:
+            console.log("action" ,action.userData);
             return {
                 ...state,
                 userData: action.userData
@@ -16,3 +15,4 @@ export default function (state = initialState, action) {
             return state
     }
 }
+ 
